@@ -6,8 +6,7 @@
 	"scripts": {
 		"start": "parcel src/index.html",
 		"build": "parcel build src/index.html",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"licorne": "echo \"J'aime les arc-en-ciels\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
 	"license": "ISC",
