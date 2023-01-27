@@ -1,4 +1,4 @@
-import { convert } from "color-convert";
+import convert from "color-convert";
 import { generatePalette, hexToCSSHSL, isHex } from "./modules/utils.js";
 import { Color } from "./modules/Color.js";
 import { Notyf } from "notyf";
@@ -21,7 +21,7 @@ const handleForm = (e) => {
 	}
 };
 
-const displayColors = (palette) => {
+const displayColors = (value, palette) => {
 	mainElement.innerHTML = ""; // Réinitialise les blocs existants et réaffiche les nouveaux;
 
 	palette.forEach((c) => {
@@ -38,7 +38,6 @@ const displayColors = (palette) => {
 		return `#${convert.hsl.hex(palette[index])}`;
 	});
 
-	console.log(gradientColors);
 	document.body.background = `linear-gradient(-45deg, ${gradientColors.join(
 		", "
 	)})`;
@@ -48,7 +47,7 @@ const displayColors = (palette) => {
 	headerElement.classList.add("minimized");
 	document.documentElement.style.setProperty(
 		"--shadow-color",
-		hexToCSSHSL(input)
+		hexToCSSHSL(value)
 	);
 };
 
