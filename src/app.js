@@ -38,7 +38,7 @@ const displayColors = (value, palette) => {
 		return `#${convert.hsl.hex(palette[index])}`;
 	});
 
-	document.body.background = `linear-gradient(-45deg, ${gradientColors.join(
+	document.body.style.background = `linear-gradient(-45deg, ${gradientColors.join(
 		", "
 	)})`;
 
